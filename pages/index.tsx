@@ -122,14 +122,14 @@ const Home: NextPage = () => {
       );
     } else {
       return (
-        <p className="text-2xl text-bold w-full h-full flex justify-center items-center py-20">
+        <p className="2xl:text-2xl 2xl:text-bold 2xl:w-full 2xl:h-full 2xl:flex 2xl:justify-center 2xl:items-center 2xl:py-20 lg:text-2xl lg:text-bold lg:w-full lg:h-full lg:flex lg:justify-center lg:py-20">
           Buscá un producto
         </p>
       );
     }
   } else {
     return (
-      <p className="text-2xl text-bold w-full h-full flex justify-center items-center py-20">
+      <p className="2xl:text-2xl 2xl:text-bold 2xl:w-full 2xl:h-full 2xl:flex 2xl:justify-center 2xl:items-center 2xl:py-20 lg:text-2xl lg:text-bold lg:w-full lg:h-full lg:flex lg:justify-center lg:py-20">
         Cargando...
       </p>
     );

@@ -34,7 +34,7 @@ const ProductList = ({
   return (
     <article key={prodId} className="border-b p-8 flex flex-row gap-5">
       <Link href={`/product/${prodId}`}>
-        <div className="w-[160px] h-full block cursor-pointer">
+        <div className="2xl:w-[160px] 2xl:h-[200px] 2xl:block 2xl:cursor-pointer lg:w-[160px] lg:h-[180px]">
           <img
             src={thumbnail}
             alt={title}

@@ -5,7 +5,7 @@ const Wrapper = ({ children }) => {
   return (
     <Fragment>
       <Navbar />
-      <div className="px-96">{children}</div>
+      <div className="2xl:px-96 lg:px-4">{children}</div>
     </Fragment>
   );
 };
