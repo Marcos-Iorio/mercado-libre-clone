@@ -22,6 +22,7 @@ import {
   getProductAttr,
 } from "../../services/services";
 import Thermometer from "../../components/Thermometer/Thermometer";
+import Head from "next/head";
 
 const ProductPage: NextPage = () => {
   const router = useRouter();
@@ -63,6 +64,19 @@ const ProductPage: NextPage = () => {
 
   return (
     <Fragment>
+      <Head>
+        <title>{productData?.title}</title>
+        <meta name="viewport" content="initial-scale=1.0, width=device-width" />
+        <meta
+          name="description"
+          content={`${productData?.title}, view price, seller info, description`}
+        />
+        <meta
+          name="keywords"
+          content="Mercado libre, clone, product data, seller, attributes, desing"
+        />
+        <meta name="robots" content="all" />
+      </Head>
       <main className="rounded bg-white my-20 shadow-sm">
         <section className=" flex flex-row gap-1 h-auto">
           <div className="basis-5/6">

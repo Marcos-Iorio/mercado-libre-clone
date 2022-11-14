@@ -87,6 +87,15 @@ const Home: NextPage = () => {
               name="viewport"
               content="initial-scale=1.0, width=device-width"
             />
+            <meta
+              name="description"
+              content="Clon de mercado libre, página de inicio, buscá productos"
+            />
+            <meta
+              name="keywords"
+              content="Mercado libre, clone, search, list, products, desing"
+            />
+            <meta name="robots" content="all" />
           </Head>
           <section className="rounded bg-white my-20 flex flex-col gap-1">
             {data?.results?.map(
