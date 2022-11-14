@@ -22,7 +22,7 @@ const Navbar = () => {
           className="2xl:relative 2xl:flex 2xl:flex-row 2xl:max-w-xl 2xl:w-full 2xl:mr-[50px] lg:flex lg:relative lg:flex-row lg:basis-auto lg:max-w-xl lg:w-full"
         >
           <input
-            className="2xl:flex-1 2xl:w-[100px] 2xl:bg-white 2xl:h-[39px] 2xl:pr-12 2xl:rounded-[2px] 2xl:shadow-md 2xl:text-black 2xl:p-3 2xl:placeholder:text-gray-300 2xl:outline-none 2xl:overflow-hidden lg:flex-1 lg:w-[100px] lg:h-[39px] lg:rounded-[2px] lg:p-3 lg:overflow-hidden lg:shadow-md"
+            className="2xl:flex-1 2xl:w-[100px] 2xl:bg-white 2xl:h-[39px] 2xl:pr-12 lg:pr-12 2xl:rounded-[2px] 2xl:shadow-md 2xl:text-black 2xl:p-3 2xl:placeholder:text-gray-300 2xl:outline-none 2xl:overflow-hidden lg:flex-1 lg:w-[100px] lg:h-[39px] lg:rounded-[2px] lg:p-3 lg:overflow-hidden lg:shadow-md"
             type="search"
             placeholder="Buscar productos, marcas y más..."
             name="search"
