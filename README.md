@@ -1,34 +1,91 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
-## Getting Started
+# Mercado Libre's clone
 
-First, run the development server:
+This is a Mercado Libre's clone made it with Nextjs, Typescript, Axios, ReactQuery, Tailwind.
 
-```bash
-npm run dev
-# or
-yarn dev
+
+## Demo
+
+[Demo](https://mercado-libre-clone-marcos-iorio.vercel.app/)
+
+
+## Purpose
+
+The porpuse of the webapp is to clone the design of the original app. The app has not functionality at all.
+You can only search and view product info.
+## Appendix
+
+The tech stack used in the app is:
+
+- React
+- Next.js 12
+- Typescript
+- Tailwind
+- Axios
+- React-Query
+- React-paginate
+- React-image-magnfify
+- Eslint
+- Prettier
+
+
+
+## API Reference
+
+#### Get all items
+
+```https
+  GET https://api.mercadolibre.com/sites/MLA/search?q=${searchParam}
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+| Parameter | Type     | Description                |
+| :-------- | :------- | :------------------------- |
+| `search param` | `string` | **Required**. A string to make a search a retrive the products |
 
-You can start editing the page by modifying `pages/index.tsx`. The page auto-updates as you edit the file.
+#### Get item
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.ts`.
+```https
+  GET https://api.mercadolibre.com/items/${id}
+```
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
+| Parameter | Type     | Description                       |
+| :-------- | :------- | :-------------------------------- |
+| `id`      | `string` | **Required**. Id of the product to fetch data |
 
-## Learn More
+#### Get seller data
 
-To learn more about Next.js, take a look at the following resources:
+```https
+  GET https://api.mercadolibre.com/users/${id}
+```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+| Parameter | Type     | Description                       |
+| :-------- | :------- | :-------------------------------- |
+| `id`      | `string` | **Required**. Id of the seller to fetch data |
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+#### Get product attributes data
 
-## Deploy on Vercel
+```https
+  GET `https://api.mercadolibre.com/products/${id}`
+```
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+| Parameter | Type     | Description                       |
+| :-------- | :------- | :-------------------------------- |
+| `id`      | `string` | **Required**. Id of the product to retrieve attributes |
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+All this information is here and how to use it
+
+
+https://developers.mercadolibre.com.ar/en_us/api-docs
+
+## Installation
+
+Install my-project with npm
+
+```bash
+  npm clone https://github.com/Marcos-Iorio/mercado-libre-clone.git
+  cd my-project
+
+  npm Install
+
+  npm run dev
+```
