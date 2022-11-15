@@ -2,7 +2,7 @@ import type { NextPage } from "next";
 import Head from "next/head";
 import { useRouter } from "next/router";
 
-import { useState, Fragment, useCallback } from "react";
+import { useState, Fragment } from "react";
 
 import ProductList from "../components/ProductList/ProductList";
 import Paginate from "../components/Paginate/Paginate";
@@ -21,7 +21,7 @@ const Home: NextPage = () => {
   const [currentPage, setCurrentPage] = useState<number>(pageNumber);
   const [pageCount, setPageCount] = useState<number>(1);
 
-  const { data, isLoading } = useQuery(
+  const { data, isLoading, isSuccess, isFetching } = useQuery(
     ["products", { search: search, page: currentPage }],
     getProducts,
     {
@@ -77,8 +77,8 @@ const Home: NextPage = () => {
     }
   };
 
-  if (!isLoading) {
-    if (data?.results?.length > 0) {
+  if (!isFetching) {
+    if (data?.paging?.total > 0) {
       return (
         <Fragment>
           <Head>
@@ -112,6 +112,7 @@ const Home: NextPage = () => {
               )
             )}
           </section>
+
           <Paginate
             pageCount={pageCount}
             initialPage={pageNumber - 1}
@@ -123,7 +124,7 @@ const Home: NextPage = () => {
     } else {
       return (
         <p className="2xl:text-2xl 2xl:text-bold 2xl:w-full 2xl:h-full 2xl:flex 2xl:justify-center 2xl:items-center 2xl:py-20 lg:text-2xl lg:text-bold lg:w-full lg:h-full lg:flex lg:justify-center lg:py-20">
-          Buscá un producto
+          No sé encontró productos.
         </p>
       );
     }
